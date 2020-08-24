@@ -1,0 +1,39 @@
+/*
+   4) Hacer un programa para ingresar por teclado la cantidad de asientos disponibles en un
+      avión y la cantidad de pasajes ocupados y luego calcular e informar el porcentaje de
+      ocupación y el porcentaje de no ocupación del mismo.
+      Ejemplo si el avión tiene 200 asientos disponibles y se vendieron 80 pasajes, el porcentaje de
+      ocupación que se informará será de un 40% y el porcentaje de no ocupación será de un 60%.
+*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int asientosDis;
+    int pasajesOcu;
+
+    int total;
+
+    float porOcu;
+    float porDis;
+
+    cout << "Ingrese la cantidad de asientos disponibles: ";
+    cin >> asientosDis;
+
+    cout << "Ingrese la cantidad de pasajes ocupados: ";
+    cin >> pasajesOcu;
+
+    total = asientosDis + pasajesOcu;
+
+    porDis = (float) asientosDis * 100 / total;
+    porOcu = (float) pasajesOcu * 100 / total;
+
+    cout << endl;
+    cout << "Porcentaje ocupado: " << porOcu << "%" << endl;
+    cout << "Porcentaje no ocupado: " << porDis << "%" << endl;
+
+
+    return 0;
+}
